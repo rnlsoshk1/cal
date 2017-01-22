@@ -4,7 +4,7 @@
 > 개발 기간 : 2016/11 ~ 2016/12
 
 ### 플레이 스토어에 앱 등록
- - [구글 플레이 스토어 다꿍 다이어리](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
+ - [구글 플레이 스토어 다꿍 다이어리 링크](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
  
 
 | 카메라, 갤러리에서 사진 가져와서 가져와서 등록하기 | 
