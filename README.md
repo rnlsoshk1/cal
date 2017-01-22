@@ -7,7 +7,7 @@
  - [구글 플레이 스토어](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
  
 
-| 카메라, | 
+| 카메라, 갤러리에서 사진 가져오기 | 
 | --- | 
 | ![Dakkung_1.gif](dakkung_1.gif)  | 
 
