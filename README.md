@@ -13,5 +13,5 @@
 
 | 직접 그리기 |
 | --- |
-[![Dakkung_2.gif](dakkung_2.gif) |
+|![Dakkung_2.gif](dakkung_2.gif) |
 
