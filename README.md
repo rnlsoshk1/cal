@@ -7,11 +7,11 @@
  - [구글 플레이 스토어](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
  
 
-| 카메라, 갤러리에서 사진 가져오기 | 
+| 카메라, 갤러리에서 사진 가져와서 가져와서 등록하기 | 
 | --- | 
 | ![Dakkung_1.gif](dakkung_1.gif)  | 
 
-| 그림노트 |
+| 직접 그리기 |
 | --- |
 [![Dakkung_2.gif](dakkung_2.gif) |
 
