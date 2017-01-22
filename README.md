@@ -5,3 +5,6 @@
 
 ### 관련 링크
  - [구글 플레이 스토어](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
+ 
+(dakkung_1.gif)
+(dakkung_2.gif)
