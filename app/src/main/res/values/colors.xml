@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#2E294E</color>
+    <color name="colorLineframe">#d2d2d2</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="color_frame">#C8C8C8</color>
+    <color name="color_dialog">#33C8C8C8</color>
+    <color name="white_20">#32FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="color_previous_sunday">#5aff0000</color>
+    <color name="color_sunday">#d7de0c04</color>
+    <color name="color_next_saturday">#78036da7</color>
+    <color name="color_saturday">#036da7</color>
+    <color name="color_day_background">#2facabab</color>
+    <color name="color_toolbar">@color/colorPrimary</color>
+    <color name="color_text">#4b4b4b</color>
+
+
+    <array name="palette">
+        <item>#FFF</item>
+        <item>#000</item>
+        <item>@color/tomato</item>
+        <item>@color/tangerine</item>
+        <item>@color/banana</item>
+        <item>@color/basil</item>
+        <item>@color/sage</item>
+        <item>@color/peacock</item>
+        <item>@color/blueberry</item>
+        <item>@color/lavender</item>
+        <item>@color/grape</item>
+        <item>@color/flamingo</item>
+        <item>@color/graphite</item>
+    </array>
+
+</resources>

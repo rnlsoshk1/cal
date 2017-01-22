@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.untie.daywal">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name=".application.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="다꿍">
+        </activity>
+        <activity android:name=".activity.EditActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.PopupActivity"
+            android:theme="@android:style/Theme.Material.Light.Dialog" />
+        <activity android:name=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.CreateActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity android:name=".ui.activity.DrawActivity"  android:screenOrientation="portrait"
+            android:label="그림 메모"
+            android:theme="@style/DrawTheme">
+        </activity>
+    </application>
+
+</manifest>

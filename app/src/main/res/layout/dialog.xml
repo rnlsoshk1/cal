@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content">
+        <LinearLayout
+        android:id="@+id/birthday_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:id="@+id/dialog_year_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:minHeight="42dp"
+                    android:text="2016 년"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/dialog_month_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:minHeight="42dp"
+                    android:text="11월"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:visibility="visible"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/yearPicker"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <NumberPicker
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_weight="1"
+                    android:id="@+id/monthPicker"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/white"
+                android:layout_margin="2dp"
+                android:id="@+id/birthday_btn_cancel"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+
+                android:layout_below="@+id/yearPicker"
+                android:text="취소"/>
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/birthday_btn_ok"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="확인"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

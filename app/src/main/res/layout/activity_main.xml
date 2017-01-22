@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.untie.daywal.activity.MainActivity">
+
+   <!-- <include android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_toolbar"
+        android:gravity="center_vertical">
+        
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/list_btn"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_list_btn"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            />
+
+        <TextView
+            android:text="2016년 11월"
+            android:layout_toRightOf="@+id/list_btn"
+            android:layout_marginLeft="32dp"
+            android:textSize="18sp"
+            android:id="@+id/this_month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff" />
+<!--
+
+        <ImageButton
+            android:id="@+id/refresh_btn"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/refresh_button"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@+id/today_tv"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+-->
+
+        <TextView
+            android:id="@+id/today_tv"
+            android:gravity="right"
+            android:text="오늘"
+            android:paddingRight="16dp"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBaseline="@+id/this_month_tv"
+            android:layout_alignBottom="@+id/this_month_tv"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:weightSum="7">
+
+            <TextView
+                android:textColor="@color/color_sunday"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SUN"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="MON"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TUE"/>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="WED"/>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="THU"/>
+            <TextView
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FRI"/>
+            <TextView
+                android:textColor="@color/color_saturday"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SAT"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/monthly"
+            android:name="com.untie.daywal.calendar.MonthlyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_monthly" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

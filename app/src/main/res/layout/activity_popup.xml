@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_popup"
+    android:layout_width="260dp"
+    android:layout_height="334dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.untie.daywal.activity.PopupActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+        <ImageButton
+            android:paddingLeft="8dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/backButton"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_back_popup_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/backButton"
+            android:text="01월 13일 월"
+            android:textColor="#000000"
+            android:id="@+id/title"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/addButton"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+
+    </RelativeLayout>
+
+    <View
+
+        android:layout_below="@id/rl_title"
+        android:layout_width="match_parent"
+        android:background="#c8c8c8"
+        android:layout_height="1px"></View>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
