@@ -7,6 +7,11 @@
  - [구글 플레이 스토어](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
  
 
-| Gif | Gif |
-| --- | --- |
-| ![Dakkung_1.gif](dakkung_1.gif)  | [![Dakkung_2.gif](dakkung_2.gif) |
+| Gif | 
+| --- | 
+| ![Dakkung_1.gif](dakkung_1.gif)  | 
+
+| Gif |
+| --- |
+[![Dakkung_2.gif](dakkung_2.gif) |
+
