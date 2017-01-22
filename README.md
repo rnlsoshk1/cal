@@ -7,11 +7,11 @@
  - [구글 플레이 스토어](https://play.google.com/store/apps/details?id=com.untie.daywal&hl=ko)
  
 
-| Gif | 
+| 카메라, | 
 | --- | 
 | ![Dakkung_1.gif](dakkung_1.gif)  | 
 
-| Gif |
+| 그림노트 |
 | --- |
 [![Dakkung_2.gif](dakkung_2.gif) |
 
