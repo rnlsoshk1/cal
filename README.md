@@ -10,7 +10,7 @@
  
 ## 3. 실제 앱 화면
 
-| 사진 추가 | 그림 메모 추가 |
+| 사진 추가 | 그림 메모 추가, 공유 |
 | --- | --- | 
 | ![Dakkung_1.gif](dakkung_1.gif)  | ![Dakkung_2.gif](dakkung_2.gif) |
 
