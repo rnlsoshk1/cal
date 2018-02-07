@@ -10,9 +10,13 @@
  
 ## 3. 실제 앱 화면
 
-| 사진 추가 | 그림 메모 추가, 공유 |
-| --- | --- | 
-| ![Dakkung_1.gif](dakkung_1.gif)  | ![Dakkung_2.gif](dakkung_2.gif) |
+| 사진 추가 |
+| --- | 
+| ![Dakkung_1.gif](dakkung_1.gif) |
+
+| 그림 메모 추가, 공유 |
+| --- | 
+| ![Dakkung_2.gif](dakkung_2.gif) |
 
 ## 4. 플레이스토어 링크
 - 구글 플레이 스토어에 다꿍 다이어리 검색
