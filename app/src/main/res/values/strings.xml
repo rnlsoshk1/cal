@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">다꿍</string>
+    <string name="_16">16</string>
+    <string name="todo">TODO</string>
+    <string name="oneday_text">행복한 하루~</string>
+    <string name="popup_text">간만의 나들이</string>
 </resources>

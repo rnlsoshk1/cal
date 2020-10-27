@@ -22,7 +22,10 @@
             android:background="@android:color/transparent"
             android:src="@drawable/ic_back_btn"
             android:layout_width="24dp"
-            android:layout_height="24dp" />
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/todo" />
 
 
         <TextView
@@ -33,7 +36,10 @@
             android:id="@+id/day_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:layout_toEndOf="@+id/list_btn"
+            android:layout_marginStart="72dp"
+            tools:ignore="UnknownIdInLayout" />
 
         <ImageButton
             android:id="@+id/ib_check"
@@ -43,7 +49,10 @@
             android:layout_height="24dp"
             android:layout_alignBottom="@+id/day_title"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/todo" />
     </RelativeLayout>
 
     <LinearLayout
@@ -52,7 +61,8 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/ll_camera_btn"
@@ -65,7 +75,8 @@
                 android:src="@drawable/ic_camera_btn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/todo" />
         </LinearLayout>
 
         <LinearLayout
@@ -80,7 +91,8 @@
                 android:layout_gravity="center"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/todo" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,7 +107,8 @@
                 android:layout_gravity="center"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/todo" />
         </LinearLayout>
     </LinearLayout>
 
@@ -108,7 +121,7 @@
             android:background="@color/white"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:weightSum="10"
@@ -127,7 +140,10 @@
                     android:textColor="@color/color_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingLeft="16dp" />
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"
+                    tools:ignore="RtlSymmetry"
+                    android:autofillHints="" />
 
                 <Button
                     android:id="@+id/changeSizeBtn"
@@ -136,10 +152,9 @@
                     android:layout_marginRight="12dp"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/circle_background"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
                     android:text="+"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:layout_marginEnd="12dp" />
 
             </LinearLayout>
 
@@ -157,7 +172,8 @@
                 android:scaleType="centerInside"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:contentDescription="@string/todo" />
 
             <View
                 android:background="@color/colorLineframe"
@@ -175,14 +191,9 @@
                 android:textColor="@color/color_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="16dp"/>
-
-
-
+                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
+                tools:ignore="RtlSymmetry,TextFields"/>
         </LinearLayout>
-
-
     </ScrollView>
-
-
 </LinearLayout>

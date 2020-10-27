@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 
 public class OneDayData {
-    
+
     Calendar calendar;
     Uri imageUri;
     private CharSequence msg = "";
@@ -47,7 +47,7 @@ public class OneDayData {
     public CharSequence getMessage() {
         return msg;
     }
-    
+
 
     public void setMessage(CharSequence msg) {
         this.msg = msg;

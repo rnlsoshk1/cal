@@ -36,7 +36,9 @@
             android:src="@drawable/ic_format_color_fill_white_24dp"
             android:padding="15dp"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/main_color_iv"
@@ -45,7 +47,9 @@
             android:src="@drawable/ic_palette_white_24dp"
             android:padding="15dp"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/main_stroke_iv"
@@ -54,7 +58,9 @@
             android:src="@drawable/ic_gesture_white_24dp"
             android:padding="15dp"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/todo"
+            android:focusable="true" />
 
         <ImageView
             android:id="@+id/main_undo_iv"
@@ -63,7 +69,9 @@
             android:src="@drawable/ic_undo_white_24dp"
             android:padding="15dp"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/main_redo_iv"
@@ -72,7 +80,9 @@
             android:src="@drawable/ic_redo_white_24dp"
             android:padding="15dp"
             android:clickable="true"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:contentDescription="@string/todo" />
 
     </LinearLayout>
 

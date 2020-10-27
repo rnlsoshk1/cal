@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="70dp"
     android:background="@drawable/button_item_bg">
-
-
 
     <LinearLayout
         android:id="@+id/rv_click"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toLeftOf="@+id/radioButton">
+        android:layout_toLeftOf="@+id/radioButton"
+        android:layout_toStartOf="@+id/radioButton"
+        tools:ignore="UseCompoundDrawables">
+
         <ImageView
             android:id="@+id/image"
             android:layout_marginBottom="8dp"
@@ -20,21 +22,21 @@
             android:src="@drawable/ic_star_on_btn"
             android:background="@drawable/button_cell_bg"
             android:layout_width="54dp"
-            android:layout_height="54dp" />
-
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/title"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center_vertical"
-            android:text="간만의 나들이"
+            android:text="@string/popup_text"
             android:textSize="10sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            tools:ignore="SmallSp"
+            android:layout_marginStart="16dp" />
     </LinearLayout>
-
-
 
         <RadioButton
             android:layout_centerInParent="true"
@@ -42,7 +44,6 @@
             android:id="@+id/radioButton"
             android:button="@drawable/star_bg"
             android:layout_width="40dp"
-            android:layout_height="40dp" />
-
-
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true" />
 </RelativeLayout>

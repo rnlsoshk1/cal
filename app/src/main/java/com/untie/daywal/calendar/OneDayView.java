@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -35,7 +35,7 @@ public class OneDayView extends LinearLayout {
         super(context);
         this.context = context;
         init(context);
- 
+
     }
 
 
@@ -43,20 +43,20 @@ public class OneDayView extends LinearLayout {
         super(context, attrs);
         init(context);
     }
- 
+
     private void init(Context context)
     {
         mDbOpenHelper = ApplicationController.getInstance().mDbOpenHelper;
 
         View v = View.inflate(context, R.layout.oneday, this);
-        
+
         dayTv = (TextView) v.findViewById(R.id.onday_dayTv);
         imageIv = (ImageView) v.findViewById(R.id.onday_imageIv);
         msgTv = (TextView) v.findViewById(R.id.onday_msgTv);
         one = new OneDayData();
-        
+
     }
-    
+
 
     public void setDay(int year, int month, int day) {
         this.one.calendar.set(year, month, day);
@@ -71,7 +71,7 @@ public class OneDayView extends LinearLayout {
     public void setDay(OneDayData one) {
         this.one = one;
     }
-    
+
 
     public OneDayData getDay() {
         return one;
@@ -100,7 +100,7 @@ public class OneDayView extends LinearLayout {
     }
 
     public void refresh() {
-        
+
         //HLog.d(TAG, CLASS, "refresh");
 
         Calendar now = Calendar.getInstance();
@@ -131,8 +131,8 @@ public class OneDayView extends LinearLayout {
 
 
         ItemData itemData = mDbOpenHelper.getDayView(String.valueOf(one.get(Calendar.YEAR))+"-"
-                          +String.valueOf(one.get(Calendar.MONTH)+1)+"-"
-                          +String.valueOf(one.get(Calendar.DATE)));
+                +String.valueOf(one.get(Calendar.MONTH)+1)+"-"
+                +String.valueOf(one.get(Calendar.DATE)));
 
         if (itemData != null) {
             if (itemData.getImage() != null) {
@@ -147,7 +147,7 @@ public class OneDayView extends LinearLayout {
             msgTv.setVisibility(TextView.VISIBLE);
             msgTv.setText(itemData.getTitle());
         }
-        
+
     }
-    
+
 }

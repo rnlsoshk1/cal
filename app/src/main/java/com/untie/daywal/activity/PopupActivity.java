@@ -5,11 +5,13 @@ import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -64,8 +66,8 @@ public class PopupActivity extends Activity {
         setContentView(R.layout.activity_popup);
 
 
-       // title = (TextView) findViewById(R.id.date);
-       // addButton = (ImageButton) findViewById(R.id.addButton);
+        // title = (TextView) findViewById(R.id.date);
+        // addButton = (ImageButton) findViewById(R.id.addButton);
         ButterKnife.bind(this);
         viewTitle();
 

@@ -10,7 +10,8 @@
         android:layout_height="150dp"
         android:src="@drawable/logo"
         android:layout_marginTop="150dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/todo" />
 
 
 </RelativeLayout>

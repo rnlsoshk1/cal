@@ -60,7 +60,7 @@ public class DbOpenHelper {
     }
     /**
      * DB에 데이터 추가
-    */
+     */
     public void DbInsert(ItemData itemData){
 
         mDB = mDBHelper.getWritableDatabase();
@@ -79,19 +79,19 @@ public class DbOpenHelper {
 
 
     /** DB항목 업그레이드 - radiobuton 수정할 때 사용 */
-     public boolean DbUpdateRadio(int id,Boolean isChecked){
+    public boolean DbUpdateRadio(int id,Boolean isChecked){
 
-     ContentValues values = new ContentValues();
-     values.put("isChecked",String.valueOf(isChecked));
+        ContentValues values = new ContentValues();
+        values.put("isChecked",String.valueOf(isChecked));
 
 
-     int result = mDB.update("memoinfo", values, "_id=?", new String[]{String.valueOf(id)});
+        int result = mDB.update("memoinfo", values, "_id=?", new String[]{String.valueOf(id)});
         if(result > 0) {
             return true;
         }
 
-         return false;
-     }
+        return false;
+    }
 
 
 
@@ -232,7 +232,7 @@ public class DbOpenHelper {
                 listViewItem.content = content;
                 listViewItem.image = image;
                 listViewItem.date = date;
-               // listViewItem.isChecked = Boolean.getBoolean(isChecked);
+                // listViewItem.isChecked = Boolean.getBoolean(isChecked);
                 listViewItem.isChecked = Boolean.valueOf(isChecked).booleanValue();
 
                 itemDatas.add(listViewItem);

@@ -24,7 +24,9 @@
             android:layout_alignParentLeft="true"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            />
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:text="2016년 11월"
@@ -34,7 +36,9 @@
             android:id="@+id/this_month_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:layout_toEndOf="@+id/list_btn"
+            android:layout_marginStart="32dp" />
 <!--
 
         <ImageButton
@@ -53,13 +57,15 @@
             android:text="오늘"
             android:paddingRight="16dp"
             android:textColor="#ffffff"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:layout_alignBaseline="@+id/this_month_tv"
             android:layout_alignBottom="@+id/this_month_tv"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="16dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
 
     </RelativeLayout>
 
@@ -70,7 +76,8 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginLeft="10dp"
-            android:weightSum="7">
+            android:weightSum="7"
+            android:layout_marginStart="10dp">
 
             <TextView
                 android:textColor="@color/color_sunday"
@@ -120,7 +127,6 @@
                 android:text="SAT"/>
     </LinearLayout>
 
-
     <FrameLayout
         android:id="@+id/main_container"
         android:layout_width="match_parent"
@@ -132,8 +138,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_monthly" />
-
     </FrameLayout>
-
-
 </LinearLayout>

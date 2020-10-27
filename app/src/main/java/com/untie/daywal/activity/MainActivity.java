@@ -22,7 +22,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -46,7 +46,6 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
 
 public class MainActivity extends FragmentActivity {
 
@@ -94,7 +93,7 @@ public class MainActivity extends FragmentActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.monthly, mf).commit();
         }
         mf.setOnMonthChangeListener(new MonthlyFragment.OnMonthChangeListener() {
-            
+
             @Override
             public void onChange(int year, int month) {
                 HLog.d(TAG, CLASS, "onChange " + year + "." + month);
@@ -154,71 +153,71 @@ public class MainActivity extends FragmentActivity {
 
     private void showDayPicker() {
 
-            Calendar calender = Calendar.getInstance();
-            pickedYear = calender.get(Calendar.YEAR);
-            pickedMonth = calender.get(Calendar.MONTH)+1;
-            final Dialog dayPickerDialog = new Dialog(this);
-            dayPickerDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dayPickerDialog.setContentView(R.layout.dialog);
-            Button okBtn = (Button) dayPickerDialog.findViewById(R.id.birthday_btn_ok);
-            Button cancelBtn = (Button) dayPickerDialog.findViewById(R.id.birthday_btn_cancel);
-            dialog_year_title = (TextView) dayPickerDialog.findViewById(R.id.dialog_year_title);
-            dialog_month_title = (TextView) dayPickerDialog.findViewById(R.id.dialog_month_title);
-            final NumberPicker yearPicker = (NumberPicker) dayPickerDialog.findViewById(R.id.yearPicker);
-            final NumberPicker monthPicker = (NumberPicker) dayPickerDialog.findViewById(R.id.monthPicker);
+        Calendar calender = Calendar.getInstance();
+        pickedYear = calender.get(Calendar.YEAR);
+        pickedMonth = calender.get(Calendar.MONTH)+1;
+        final Dialog dayPickerDialog = new Dialog(this);
+        dayPickerDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dayPickerDialog.setContentView(R.layout.dialog);
+        Button okBtn = (Button) dayPickerDialog.findViewById(R.id.birthday_btn_ok);
+        Button cancelBtn = (Button) dayPickerDialog.findViewById(R.id.birthday_btn_cancel);
+        dialog_year_title = (TextView) dayPickerDialog.findViewById(R.id.dialog_year_title);
+        dialog_month_title = (TextView) dayPickerDialog.findViewById(R.id.dialog_month_title);
+        final NumberPicker yearPicker = (NumberPicker) dayPickerDialog.findViewById(R.id.yearPicker);
+        final NumberPicker monthPicker = (NumberPicker) dayPickerDialog.findViewById(R.id.monthPicker);
 
-            dialog_year_title.setText(String.valueOf(pickedYear)+"년");
-            dialog_month_title.setText(String.valueOf(pickedMonth)+"월");
-            yearPicker.setMinValue(pickedYear - 100);
-            yearPicker.setMaxValue(pickedYear + 40);
-            yearPicker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
-            //   setDividerColor(yearPicker, android.R.color.white );
-            yearPicker.setWrapSelectorWheel(false);
-            yearPicker.setValue(pickedYear);
-            yearPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-                @Override
-                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                    dialog_year_title.setText(String.valueOf(newVal)+"년");
-                }
-            });
+        dialog_year_title.setText(String.valueOf(pickedYear)+"년");
+        dialog_month_title.setText(String.valueOf(pickedMonth)+"월");
+        yearPicker.setMinValue(pickedYear - 100);
+        yearPicker.setMaxValue(pickedYear + 40);
+        yearPicker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
+        //   setDividerColor(yearPicker, android.R.color.white );
+        yearPicker.setWrapSelectorWheel(false);
+        yearPicker.setValue(pickedYear);
+        yearPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                dialog_year_title.setText(String.valueOf(newVal)+"년");
+            }
+        });
 
-            monthPicker.setMinValue(1);
-            monthPicker.setMaxValue(12);
-            monthPicker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
-            //   setDividerColor(monthPicker, android.R.color.white);
-            //monthPicker.setWrapSelectorWheel(false);
-            monthPicker.setValue(pickedMonth);
-            monthPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-                @Override
-                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                    dialog_month_title.setText(String.valueOf(newVal)+"월");
-                }
-            });
+        monthPicker.setMinValue(1);
+        monthPicker.setMaxValue(12);
+        monthPicker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
+        //   setDividerColor(monthPicker, android.R.color.white);
+        //monthPicker.setWrapSelectorWheel(false);
+        monthPicker.setValue(pickedMonth);
+        monthPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                dialog_month_title.setText(String.valueOf(newVal)+"월");
+            }
+        });
 
-            okBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //TODO : 날짜로 이동 yearPicker.getValue() monthPicker.getValue()
+        okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO : 날짜로 이동 yearPicker.getValue() monthPicker.getValue()
 
-                    //Toast.makeText(MainActivity.this, String.valueOf(yearPicker.getValue())+"/"+monthPicker.getValue(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, String.valueOf(yearPicker.getValue())+"/"+monthPicker.getValue(), Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                    intent.putExtra("year",yearPicker.getValue());
-                    intent.putExtra("month",monthPicker.getValue());
-                    intent.putExtra("order",1);
-                    dayPickerDialog.dismiss();
-                    startActivity(intent);
-                    overridePendingTransition(0, 0);
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                intent.putExtra("year",yearPicker.getValue());
+                intent.putExtra("month",monthPicker.getValue());
+                intent.putExtra("order",1);
+                dayPickerDialog.dismiss();
+                startActivity(intent);
+                overridePendingTransition(0, 0);
 
-                }
-            });
-            cancelBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dayPickerDialog.dismiss();
-                }
-            });
-            dayPickerDialog.show();
+            }
+        });
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dayPickerDialog.dismiss();
+            }
+        });
+        dayPickerDialog.show();
 
     }
 

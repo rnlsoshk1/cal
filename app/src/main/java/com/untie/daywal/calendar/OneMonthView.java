@@ -2,7 +2,7 @@ package com.untie.daywal.calendar;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -161,20 +161,20 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener, 
         if(mYear == year && mMonth == month) {
             return;
         }
-        
+
         long makeTime = System.currentTimeMillis();
-        
+
         this.mYear = year;
         this.mMonth = month;
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month, 1);
         calendar.setFirstDayOfWeek(Calendar.SUNDAY);//일요일을 주의 시작일로 지정
-        
+
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);//1일의 요일
         int maxOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);//마지막 일수
         ArrayList<OneDayData> oneDayDataList = new ArrayList<>();
-        
+
         calendar.add(Calendar.DAY_OF_MONTH, Calendar.SUNDAY - dayOfWeek);//주의 첫 일로 이동
         //HLog.d(TAG, CLASS, "first day : " + calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.KOREA) + " / " + calendar.get(Calendar.DAY_OF_MONTH));
 
@@ -183,14 +183,14 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener, 
         while(true) {
             seekDay = calendar.get(Calendar.DAY_OF_WEEK);
             if(dayOfWeek == seekDay) break;
-            
+
             OneDayData one = new OneDayData();
             one.setDay(calendar);
             oneDayDataList.add(one);
             //하루 증가
             calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
-        
+
         //HLog.d(TAG, CLASS, "this month : " + calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.KOREA) + " / " + calendar.get(Calendar.DAY_OF_MONTH));
         /* add this month */
         for(int i=0; i < maxOfMonth; i++) {
@@ -200,29 +200,29 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener, 
             //add one day
             calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
-        
+
         /* add next month */
         while(true){
             if(calendar.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
                 OneDayData one = new OneDayData();
                 one.setDay(calendar);
                 oneDayDataList.add(one);
-            } 
+            }
             else {
                 break;
             }
             //add one day
             calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
-        
+
         if(oneDayDataList.size() == 0) return;
 
         //Remove all day-views
         this.removeAllViews();
-        
+
         int count = 0;
         for(OneDayData one : oneDayDataList) {
-            
+
             if(count % 7 == 0) {
                 addView(weeks.get(count / 7));
             }
@@ -255,16 +255,16 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener, 
     protected String doubleString(int value) {
 
         String temp;
- 
+
         if(value < 10){
             temp = "0"+ String.valueOf(value);
-             
+
         }else {
             temp = String.valueOf(value);
         }
         return temp;
     }
- 
+
     @Override
     public void onClick(View v) {
 
